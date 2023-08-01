@@ -11,3 +11,5 @@ crawling/selenium/Scripts/
 *.png
 ./picture/
 *.jpg
+/.cph
+/.idea
