@@ -16,8 +16,14 @@
 - [알고리즘_수업_점근적_표기_1](jonghyun/기초/jonghyun/기초/알고리즘_수업_점근적_표기_1.py.py)
 
 ## 배열
-- [음계(구현)](jonghyun\baekjun\알고리즘\음계.py)
-- [블랙잭(재귀)](jonghyun\baekjun\알고리즘\블랙잭.py)
+- [음계(구현)](jonghyun\baekjun\코테준비_기초\음계.py)
 
 ## 구현
-- [단어_뒤집기(문자열)](jonghyun\baekjun\알고리즘\단어_뒤집기.py)
+- [단어_뒤집기(문자열)](jonghyun\baekjun\코테준비_기초\단어_뒤집기.py)
+
+## 브루트포스
+- [블랙잭(재귀)](jonghyun\baekjun\코테준비_기초\블랙잭.py)
+
+## 스택
+- [스택_수열(그리디)](jonghyun\baekjun\코테준비_기초\스택_수열.py)
+- [프린터_큐(그리디,구현)](jonghyun\baekjun\코테준비_기초\스택_수열.py)
