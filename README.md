@@ -1,5 +1,5 @@
 # 23.8.1. 코딩테스트
-- 참고자료 : https://patiencelee.tistory.com/1072, 패스트캠퍼스 강의
+- 참고자료 : https://patiencelee.tistory.com/1072, 패스트캠퍼스 강의, 코드플러스 강의
 ## 기초
 
 - [대지](jonghyun/기초/대지.py)
