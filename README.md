@@ -23,6 +23,8 @@
 
 ## 브루트포스
 - [블랙잭](jonghyun\baekjun\코테준비_기초\블랙잭.py)
+- [일곱_난쟁이](jonghyun\baekjun\코테준비\기초\3_브루트포스\일곱_난쟁이.py)
+- [날짜_계산](jonghyun\baekjun\코테준비\기초\3_브루트포스\날짜_계산.py)
 
 ## 스택
 - [스택_수열](jonghyun\baekjun\코테준비_기초\스택_수열.py)
