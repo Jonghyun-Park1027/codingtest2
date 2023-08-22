@@ -29,6 +29,8 @@
 - [리모컨](jonghyun\baekjun\코테준비\기초\3_브루트포스\리모컨.py)
 - [테트로미노](jonghyun\baekjun\코테준비\기초\3_브루트포스\테트로미노.py)
 - [카잉_달력](jonghyun\baekjun\코테준비\카잉_달력.py)
+- [1_2_3_더하기](jonghyun\baekjun\코테준비\기초\3_브루트포스\1_2_3_더하기.py)
+- [N과_M_1](jonghyun\baekjun\코테준비\기초\3_브루트포스\N과_M_1.py)
 
 ## 스택
 - [스택_수열](jonghyun\baekjun\코테준비_기초\스택_수열.py)

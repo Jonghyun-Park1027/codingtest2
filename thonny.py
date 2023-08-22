@@ -1,66 +1,21 @@
-# 4개일떄 return
 n, m = map(int,input().split())
-graph = []
-for _ in range(n):
-    graph.append(list(map(int,input().split())))
-def findmax(maxlen, currentlen, x,y, start):
-    data = []
-    # 좌로 이동
-    if x >1:
-        print("-x")
-        currentlen +=1
-        x -=1
-        start += graph[y][x]
-        if currentlen>4 :
-            data.append(start)
-            return data
-        else :
-            findmax(maxlen, currentlen, x,y, start)
+check = [False] * (n + 1)
+answer = [False] * m
 
-    # 우로이동
-    if x < m:   
-        print("+x")
+data = []
+def nm(start, n, m ):
+    if start == m: # 손절라인
+        return print(' '.join(map(str,answer))) # 달성했으면 돌아가
+    
+    for i in range(1,n+1):
+        if check[i]:
+            continue
+        if i <= start :
+            continue
+        answer[start] = i
+        check[i] = True
         
-        currentlen +=1
-        x +=1
-        start += graph[y][x]
-        if currentlen>4 :
-            data.append(start)
-            return data
-        else :
-            findmax(maxlen, currentlen, x,y, start)
+        nm(start+1,n,m)
+        check[i] = False
 
-    # 위로이동
-    if 0<y:
-        print("-y")
-        
-        currentlen +=1
-        y -=1
-        start += graph[y][x]
-        if currentlen>4 :
-            data.append(start)
-            # print(start)
-            return data
-        else :
-            findmax(maxlen, currentlen, x,y, start)
-
-    # 아래로 이동
-    if y<m:
-        print("+y")
-        currentlen +=1
-        y +=1
-        start += graph[y][x]
-        if currentlen>4 :
-            data.append(start)
-            return data
-        else :
-            findmax(maxlen, currentlen, x,y, start)
-    return data
-
-maxlen = 4
-currentlen = 1
-x = 0
-y = 0
-start = graph[y][x]
-print(findmax(maxlen, currentlen, x,y, start))
-# print(data)
+nm(0,n,m)
