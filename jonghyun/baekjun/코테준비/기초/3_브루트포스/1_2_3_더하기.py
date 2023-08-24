@@ -1,41 +1,41 @@
-# 1, 2, 3의 합
+'''def fact_1(n):
+    if n > 1:
+        return n * fact_1(n-1)
+    return n
+def fact_2(n):
+    if n<=1:
+        return n
+    else :
+        return n*fact_2(n-1)
+    
+print(fact_2(3))'''
 n = int(input())
+# check = [0]*(n+1)
+# answer = [0]
+count = 0
+def cal(n, target):
+    if n > target :
+        return 0
+    if target == n :
+        # count += 1
+        # print(count)
+        return 1
+    # loop = 1
+    now = 0
+    # while loop < 11:
+    # for _ in range(10):
+    for i in range(1,4):
+        # if check[i] :
+            # continue
+        # check[i] = True
+
+        now += cal(n+i, target)
+        # check[i] = False
+    return now
+        # loop +=1
 for _ in range(n):
     m = int(input())
-    # if m == 1 :
-    #     print(1)
-    #     continue
-    answer = 0
-    for a in range(1,4):
-        if a == m:
-            answer += 1
-        for b in range(1,4):
-            if a+b == m:
-                answer += 1
-                # continue
-            for c in range(1,4):
-                if a+b+c == m:
-                    answer += 1
-                for d in range(1,4):
-                    if a+b+c+d == m:
-                        answer +=1
-                    for e in range(1,4):
-                        if a+b+c+e+d==m:
-                            answer +=1
+    print(cal(0, m))
 
-                        for f in range(1,4):
-                            if a+b+c+d+e+f == m:
-                                answer +=1
-                            for g in range(1,4):
-                                if a+b+c+d+e+f+g == m:
-                                    answer +=1
-                                for h in range(1,4):
-                                    if a+b+c+d+e+f+g+h == m:
-                                        answer +=1
-                                    for i in range(1,4):
-                                        if a+b+c+d+e+f+g+h+i == m:
-                                            answer += 1
-                                        for j in range(1,4):
-                                            if a+b+c+d+e+f+g+h+i+j == m:
-                                                answer += 1
-    print(answer)
+# print(count)
+
