@@ -37,6 +37,7 @@
 - [NM과_K_1](jonghyun\baekjun\코테준비\기초\3_브루트포스\NM과_K_1.py)
 - [암호_만들기](jonghyun\baekjun\코테준비\기초\3_브루트포스\암호_만들기.py)
 - [퇴사](jonghyun\baekjun\코테준비\기초\3_브루트포스\퇴사.py)
+- [스타트와_링크](jonghyun\baekjun\코테준비\기초\3_브루트포스\스타트와_링크.py)
 
 ## 스택
 - [스택_수열](jonghyun\baekjun\코테준비_기초\스택_수열.py)
