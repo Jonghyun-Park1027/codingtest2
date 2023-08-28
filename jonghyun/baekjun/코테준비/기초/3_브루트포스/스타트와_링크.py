@@ -15,9 +15,9 @@ print(fact_2(3))'''
 def cal(index, first, second):
     if index == n:
         if len(first) != n//2:
-            return -1
+            return -1 # 아닐경우 -1로 리턴하여 표시해준다
         if len(second) != n//2:
-            return -1
+            return -1 # 아닐경우 -1로 리턴하여 표시해준다.
         t1 = 0
         t2 = 0
         for i in range(n//2):
