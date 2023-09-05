@@ -1,21 +1,12 @@
-n, m = map(int,input().split())
-check = [False] * (n + 1)
-answer = [False] * m
+data = list(input())
+cursor = [i for i in range(len(data)+1)]
+idx = 0
+# if cursor[idx] == 0: # L,B 무시의 경우
+    # pass
+# if cursor[idx] == len(data): # D 무시의 경우
+    # pass
 
-data = []
-def nm(start,num, n, m ):
-    if start == m: # 손절라인
-        return print(' '.join(map(str,answer))) # 달성했으면 돌아가
-    
-    for i in range(num,n+1):
-        if check[i]:
-            continue
-        # if i <= start:
-            # continue
-        answer[start] = i
-        check[i] = True
-        
-        nm(start+1,i+1,n,m)
-        check[i] = False
-
-nm(0,1,n,m)
+a = [0]
+while a :
+    a = input()
+    print("0")
