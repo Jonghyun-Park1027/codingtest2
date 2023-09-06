@@ -60,3 +60,6 @@
 - [스택](jonghyun\baekjun\알고리즘\스택.py)
 - [괄호](jonghyun\baekjun\알고리즘\괄호.py)
 - [스택_수열](jonghyun\baekjun\알고리즘\스택_수열.py)
+- [에디터](jonghyun\baekjun\알고리즘\에디터.py)
+- [요세푸스_문제](jonghyun\baekjun\알고리즘\요세푸스_문제.py)
+- [큐](jonghyun\baekjun\알고리즘\큐.py)
