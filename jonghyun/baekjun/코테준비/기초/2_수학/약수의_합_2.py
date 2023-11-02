@@ -1,24 +1,23 @@
-''' 구현 아이디어를 몰라서 못품
-# import math
 n = int(input())
-sum = 0
 
-for i in range(1,n+1):
-    data = int(i**(1/2))
-    # print(data)
-    
-    for j in range(1, i+1):
-        if i%j == 0:
-            sum += i
-            sum += i/j
+# def cal_1(n):
+#     target = int(n **0.5)
+
+#     answer = 0
+#     for i in range(1, target+1):
         
-            # print(sum)
-print(sum)
-'''
+#         if n % i == 0 and i**2 != n:
+#             answer += i
+#             answer+= n//i
 
-# 답
-n = int(input())
-sum = 0
+#         elif i**2 == n:
+#             answer+=i        
+#     return answer
+
+answer = 0
 for i in range(1,n+1):
-    sum+=n//i*i
-print(sum)
+    answer += n//i*i
+
+    answer
+
+print(answer)
