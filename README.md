@@ -30,7 +30,7 @@
 - [리모컨_unsolved](jonghyun\baekjun\코테준비\기초\3_브루트포스\리모컨(unsolved).py)
 - [테트로미노_unsolved](jonghyun\baekjun\코테준비\기초\3_브루트포스\테트로미노(unsolved).py)
 - [카잉_달력_unsolved](jonghyun\baekjun\코테준비\기초\3_브루트포스\카잉_달력(unsolved).py)
-- [1_2_3_더하기_unsolved](jonghyun\baekjun\코테준비\기초\3_브루트포스\1_2_3_더하기(unsolved).py)
+- [1_2_3_더하기](jonghyun\baekjun\코테준비\기초\3_브루트포스\1_2_3_더하기.py)
 - [N과_M_1](jonghyun\baekjun\코테준비\기초\3_브루트포스\N과_M_1.py)
 - [N과_M_2](jonghyun\baekjun\코테준비\기초\3_브루트포스\N과_M_2.py)
 - [N과_M_3](jonghyun\baekjun\코테준비\기초\3_브루트포스\N과_M_3.py)
