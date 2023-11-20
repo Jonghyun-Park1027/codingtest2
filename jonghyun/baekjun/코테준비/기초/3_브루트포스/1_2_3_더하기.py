@@ -1,41 +1,42 @@
-# 1, 2, 3의 합
-n = int(input())
-for _ in range(n):
-    m = int(input())
-#   if m == 1 :
-#       print(1)
-#       continue
-    answer = 0
-    for a in range(1,4):
-        if a == m:
-            answer += 1
-        for b in range(1,4):
-            if a+b == m:
-                answer += 1
-                # continue
-            for c in range(1,4):
-                if a+b+c == m:
-                    answer += 1
-                for d in range(1,4):
-                    if a+b+c+d == m:
-                        answer +=1
-                    for e in range(1,4):
-                        if a+b+c+e+d==m:
-                            answer +=1
+# 테스트 케이스
+T = int(input())
 
-                        for f in range(1,4):
-                            if a+b+c+d+e+f == m:
-                                answer +=1
-                            for g in range(1,4):
-                                if a+b+c+d+e+f+g == m:
-                                    answer +=1
-                                for h in range(1,4):
-                                    if a+b+c+d+e+f+g+h == m:
-                                        answer +=1
-                                    for i in range(1,4):
-                                        if a+b+c+d+e+f+g+h+i == m:
-                                            answer += 1
-                                        for j in range(1,4):
-                                            if a+b+c+d+e+f+g+h+i+j == m:
-                                                answer += 1
+# 1,2,3 리스트 초기화
+data = [1,2,3]
+
+
+# DFS 함수 선언(n, check)
+def DFS(n, cnt, start):
+    # answer를 global에 쓴다
+    global answer
+# n 이 되었을때 cnt += 1 
+    if n == cnt:
+        # print("activate")
+        answer += 1
+        # print(answer)
+        return 
+# 하나씩 넣고 다음 리스트를 찾는다 if continue
+    for i in range(start, 3):
+        # if start[i] == True :
+        #     continue
+        if cnt + data[i] > n :
+            # cnt -=data[i]
+            continue
+        # start[i] = True
+        cnt += data[i]
+        DFS(n, cnt, start)
+        cnt -= data[i]
+    # start += 1
+
+# for문을 돌며 n 할당
+for i in range(T):
+    # answer 초기화 (for문에 넣어야함)
+    answer = 0
+    cnt = 0
+    n = int(input())
+    # start 만들기
+    check = [0] * n
+    start =0
+    DFS(n, cnt, start)
+# 그후 종료되면 answer를 출력
     print(answer)

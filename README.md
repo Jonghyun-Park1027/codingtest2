@@ -37,6 +37,8 @@
 - [N과_M_4](jonghyun\baekjun\코테준비\기초\3_브루트포스\N과_M_4.py)
 - [N과_M_5](jonghyun\baekjun\코테준비\기초\3_브루트포스\N과_M_5.py)
 - [N과_M_6](jonghyun\baekjun\코테준비\기초\3_브루트포스\N과_M_6.py)
+- [N과_M_7](jonghyun\baekjun\코테준비\기초\3_브루트포스\N과_M_7.py)
+- [N과_M_8](jonghyun\baekjun\코테준비\기초\3_브루트포스\N과_M_8.py)
 - [NM과_K_1](jonghyun\baekjun\코테준비\기초\3_브루트포스\NM과_K_1.py)
 - [암호_만들기](jonghyun\baekjun\코테준비\기초\3_브루트포스\암호_만들기.py)
 - [퇴사](jonghyun\baekjun\코테준비\기초\3_브루트포스\퇴사.py)
