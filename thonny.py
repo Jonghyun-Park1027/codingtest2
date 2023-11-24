@@ -1,36 +1,47 @@
 n = int(input())
-data= []
-for _ in range(n):
-    data.append(list(map(int,input().split())))
+graph = [list(map(int,input().split())) for _ in range(n)]
 
-# pay 초기화
-earn = 0
-check = [0]* n
-def DFS(check, index,cnt):
-    global earn
-    # print(index)
-    if index > n-1:
+
+s_t = []
+l_t = []
+check = [0]*(n)
+answer = 10000
+# i 행을 +1 하면서 구함
+# j 열을 +1 하면서 구함
+def go(L,s_t, l_t, check):
+# L 이 n이 될떄 return
+    global answer
+    if L == n-1:
+        answer = min(answer, sum(s_t)-sum(l_t))
         return
-    if index < n:
-        if earn < cnt :
-            
-            earn = max(earn, cnt)
-        return
-
-    # pay에 이전값을 저장하고 max 함수를 써서 최종값 산출
-
-    # 리스트를 for문으로 순회하며 하나씩 대입 근데, index를 start로 계속 갱신해준다. index의 초기값은 0
-    for i in range(index, n):
-    # index(n + data[0])가 n+1을 넘는다면 return
-        day, pay = data[i]  
-        if check[index]:
+# if not n :
+#     continue 또는 다른 방식으로 0 일때 캔슬해야함
+    for i in range(n):
+        if graph[L][i] == 0:
             continue
+        if check[i] :
+            continue
+        if L == n/2 :
+            l_t.append(graph[i][L])
+            check[i] = True
+            l_t.append(graph[L][i])
+            check[L] = True
+            go(L+1, s_t, l_t, check)
+            l_t.pop()
+            check[i] = False
+            l_t.pop()
+            check[L] = False
+# i는 행, j는 열, 0은 자기자신
+        else :
+            s_t.append(graph[i][L])
+            check[i] = True
+            s_t.append(graph[L][i])
+            check[L] = True
+            go(L+1, s_t, l_t, check)
+            s_t.pop()
+            check[i] = False
+            s_t.pop()
+            check[L] = False
 
-        cnt += pay
-        check[index] = True
-        DFS(check, index+day, cnt)
-        check[index] = False
-        cnt -= pay
-
-DFS(check, 0, 0)
-print(earn) 
+go(0, s_t, l_t, check)
+print(answer)

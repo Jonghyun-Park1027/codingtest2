@@ -1,33 +1,27 @@
-def DFS(L,n,k,data):
-    if L == k:
+def DFS(L, n, k, data):
+    if L == k :
         print(*data)
-    else :
-        for i in range(1, n+1):
-            data.append(i)
-            DFS(L+1, n, k, data)
-            data.pop() 
-L = 0
-n = 3
-k = 2
+        return
+    for i in range(n):
 
-data = []
 
-DFS(L,n,k, data)
-
+        data.append(i)
+        DFS(L+1, n, k, data)
+        data.pop()
 from collections import deque
 def BFS():
-    dQ=deque()
+    dQ= deque()
     dQ.append(1)
-    L=0
-    while(dQ):# deque가 비어있을때까지
-        length=len(dQ)
-        for _ in range(length):
-            v=dQ.popleft()
-            print(v, end='')
+    L = 0
+    while(dQ): # deque이 빌때까지
+        length= len(dQ)
+        for _ in range(len(length)):
+            v = dQ.popleft()
             for nv in [v*2, v*2+1]:
-                if nv> 7:
+                if nv > 7:
                     continue
                 dQ.append(nv)
-        L+=1
 
+        L += 1
 BFS()
+
