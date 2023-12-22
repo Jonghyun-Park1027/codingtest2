@@ -1,0 +1,16 @@
+{
+  version: 1,
+  mediaFileName: '2_3.mkv',
+  cutSegments: [
+    {
+      start: 0,
+      end: 677.945036,
+      name: '',
+    },
+    {
+      start: 5802.773679,
+      end: 7475.057794,
+      name: '',
+    },
+  ],
+}
