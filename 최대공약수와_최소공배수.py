@@ -1,13 +1,16 @@
-a, b = map(int,input().split())
+a, b = map(int, input().split())
 
-# gcd 최대 공약수 구하기
+# print(a,b)
 
-def gcd(a,b):
-    if b == 0:
+def GCD(a,b):
+    if b == 0 :
         return a
-    return gcd(b, a%b)
-g = gcd(a,b)
-print(g)
+    # print(a,b)
+    return GCD(b, a%b)
 
-l = g * (a/g) * (b/g)
-print(int(l))
+gcd = GCD(a,b)
+print(gcd)
+
+lcm = gcd * (a/gcd) * (b/gcd)
+print(int(lcm))
+

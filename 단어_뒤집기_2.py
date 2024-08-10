@@ -1,31 +1,38 @@
-def print_stack(s):
-    while s:
-        print(s.pop(), end='')
 
-def main():
-    str_input = input()
-    tag = False
-    stack = []
+words = input().split()  # 입력 받기
 
-    for ch in str_input:
-        if ch == '<':
-            print_stack(stack)
+for word in words:
+    raw_word = []  # 태그가 아닌 문자를 저장할 리스트
+    tag_word = []  # 태그 문자를 저장할 리스트
+    idx = 0
+    tag = False  # 현재 태그 내부인지 여부를 나타내는 플래그
+    while idx < len(word):
+        ch = word[idx]
+        if ch == "<":
+            # 태그 시작 전까지의 문자들을 역순으로 출력
+            while raw_word:
+                print(raw_word.pop(), end="")
             tag = True
-            print(ch, end='')
-        elif ch == '>':
+            tag_word.append(ch)
+        elif ch == ">":
             tag = False
-            print(ch, end='')
+            tag_word.append(ch)
+            # 태그 문자들을 그대로 출력
+            while tag_word:
+                print(tag_word.pop(0), end="")
         elif tag:
-            print(ch, end='')
+            # 태그 내부 문자 처리
+            tag_word.append(ch)
         else:
-            if ch == ' ':
-                print_stack(stack)
-                print(ch, end='')
-            else:
-                stack.append(ch)
+            # 태그 외부 문자 처리
+            raw_word.append(ch)
+        idx += 1
 
-    print_stack(stack)
-    print()
+    # 남은 태그가 아닌 문자들을 역순으로 출력
+    while raw_word:
+        print(raw_word.pop(), end="")
 
-if __name__ == "__main__":
-    main()
+    print(" ", end="")  # 단어 사이 공백 출력
+
+print()  # 줄바꿈 출력
+

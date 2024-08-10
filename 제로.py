@@ -1,14 +1,16 @@
+# k는 100000이하
 import sys
 input = sys.stdin.readline
 k = int(input())
 
-answer = []
-for _ in range(k):
-    n = int(input())
-    if n == 0:
-        answer.pop()
-        continue
-    
-    answer.append(n)
+g = []
 
-print(sum(answer))
+for _ in range(k):
+    cnt = int(input())
+    if cnt == 0:
+        g.pop()
+        continue
+
+    g.append(cnt)
+
+print(sum(g))    

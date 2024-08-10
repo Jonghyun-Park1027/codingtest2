@@ -1,33 +1,32 @@
-g = input()
+import sys
+input = sys.stdin.readline
 
+bar = input()
+# print(bar)
 
-# print(g)
+n = len(bar)
 
-# 레이져로 자르는 절단부위 만들기
-pipe = []
-count = 0
+stack = []
+# 막대기 그래프
+g = [0] * n
 
-# 인덱스를 기준으로 파이프 갯수를 저장할 리스트
-
-
-for i, v in enumerate(g):
-    # 절단 부분이 생길 때
-    if v == '(':
-        pipe.append(i)
+answer = 0
+cnt = 0
+for i in range(n) :
+    c = bar[i]
+    if c == "(":
+        # cnt += 1
+        # g[i]+=cnt
+        stack.append(i)
     else :
-
-        if pipe and pipe[-1] + 1 == i:
-            # 파이프 내에 파이프가 존재할 경우 계속 자른다
-            
-            pipe.pop()
-            count += len(pipe)
-                # print("act")
-# 파이프 만들기, 길이를 고려하지 않았을 경우, 단순히 있다 없다정도로 갯수를 넣는다
+        if not stack :
+            continue
+        if stack[-1] + 1 == i :
+            stack.pop()
+            answer += len(stack)
         else :
-            if pipe:
-
-                pipe.pop()
-            count += 1
-print(count)
-
-    
+            stack.pop()
+            answer += 1
+    # print(cnt)
+# print(g)
+print(answer)
